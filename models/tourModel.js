@@ -108,6 +108,7 @@ const tourSchema = new mongoose.Schema(
         day: Number,
       },
     ],
+    // Create relationship between tours and guides
     guides: [{ type: mongoose.Schema.ObjectId, ref: 'User' }],
   },
   {
@@ -151,9 +152,12 @@ tourSchema.pre(/^find/, function (next) {
   next();
 });
 
-tourSchema.post(/^find/, function (docs, next) {
-  // console.log(docs);
-  // console.log(`Query took ${Date.now() - this.start} milliseconds`);
+tourSchema.pre(/^find/, function (next) {
+  // populate guides in tours, excluding __v and passwordChangedAt
+  this.populate({
+    path: 'guides',
+    select: '-__v -passwordChangedAt',
+  });
   next();
 });
 
