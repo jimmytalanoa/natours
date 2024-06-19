@@ -39,6 +39,10 @@ const reviewSchema = new mongoose.Schema(
   }
 );
 
+// INDEXES
+// prevents a user from writing multiple reviews for the same tour
+reviewSchema.index({ tour: 1, user: 1 }, { unique: true });
+
 // VIRTUALS
 
 // DOCUMENT MIDDLEWARE: runs before .save() and .create()
