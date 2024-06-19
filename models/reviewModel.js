@@ -1,5 +1,13 @@
 // review / rating / createdAt / ref to tour / ref to user
 
+//challenge
+// create endpoint for getting review
+// create endpoint for creating review
+// create controller file reviewController
+//create routes in file reviewRoutes
+// create review
+// retrieve review
+
 const mongoose = require('mongoose');
 
 const reviewSchema = new mongoose.Schema(
@@ -19,7 +27,7 @@ const reviewSchema = new mongoose.Schema(
       type: Date,
       default: Date.now(),
     },
-    tours: [
+    tour: [
       {
         type: mongoose.Schema.ObjectId,
         ref: 'Tour',
@@ -40,6 +48,13 @@ const reviewSchema = new mongoose.Schema(
   }
 );
 
+// VIRTUALS
+
+// DOCUMENT MIDDLEWARE: runs before .save() and .create()
+
+// QUERY MIDDLEWARE
+
+// AGGREGATION MIDDLEWARE
 const Review = mongoose.model('Review', reviewSchema);
 
 module.exports = Review;

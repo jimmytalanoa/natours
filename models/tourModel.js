@@ -145,6 +145,7 @@ tourSchema.pre('save', function (next) {
 // });
 
 // QUERY MIDDLEWARE
+// displays all tours except secret tours
 tourSchema.pre(/^find/, function (next) {
   this.find({ secretTour: { $ne: true } });
 
