@@ -53,6 +53,17 @@ const reviewSchema = new mongoose.Schema(
 // DOCUMENT MIDDLEWARE: runs before .save() and .create()
 
 // QUERY MIDDLEWARE
+reviewSchema.pre(/^find/, function (next) {
+  // populate user and tour within the review
+  this.populate({
+    path: 'user',
+    select: 'name photo',
+  }).populate({
+    path: 'tour',
+    select: 'name',
+  });
+  next();
+});
 
 // AGGREGATION MIDDLEWARE
 const Review = mongoose.model('Review', reviewSchema);
