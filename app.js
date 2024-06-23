@@ -30,17 +30,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'self'", 'data:', 'blob:'],
+      defaultSrc: ["'self'", 'data:', 'blob:', 'https:', 'ws:'],
 
       baseUri: ["'self'"],
 
       fontSrc: ["'self'", 'https:', 'data:'],
 
-      scriptSrc: ["'self'", 'https://*.cloudflare.com'],
-
-      scriptSrc: ["'self'", 'https://*.stripe.com'],
-
-      scriptSrc: ["'self'", 'http:', 'https://*.mapbox.com', 'data:'],
+      scriptSrc: [
+        "'self'",
+        'https://*.cloudflare.com',
+        'https:',
+        'http:',
+        'blob:',
+        'data:',
+        'https://*.stripe.com',
+        'https://js.stripe.com',
+        // 'https://*.mapbox.com',
+        'https://*.google.com',
+        'https://*.gstatic.com',
+        'https://*.googleapis',
+      ],
 
       frameSrc: ["'self'", 'https://*.stripe.com'],
 

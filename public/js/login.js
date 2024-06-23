@@ -1,4 +1,7 @@
-const login = async (email, password) => {
+import axios from 'axios';
+
+export const login = async (email, password) => {
+  console.log(email, password);
   try {
     const res = await axios({
       method: 'POST',
@@ -21,10 +24,3 @@ const login = async (email, password) => {
     alert(err.response.data.message);
   }
 };
-
-document.querySelector('.form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  login(email, password);
-});
