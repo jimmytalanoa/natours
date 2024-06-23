@@ -2057,6 +2057,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "login", ()=>login);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _alerts = require("./alerts");
 const login = async (email, password)=>{
     console.log(email, password);
     try {
@@ -2069,18 +2070,18 @@ const login = async (email, password)=>{
             }
         });
         if (res.data.status === "success") {
-            alert("Logged in successfully!");
+            (0, _alerts.showAlert)("success", "Logged in successfully!");
             window.setTimeout(()=>{
                 location.assign("/");
             }, 1500);
         }
         console.log(res);
     } catch (err) {
-        alert(err.response.data.message);
+        (0, _alerts.showAlert)("error", err.response.data.message);
     }
 };
 
-},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jo6P5":[function(require,module,exports) {
+},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./alerts":"6Mcnf"}],"jo6P5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>(0, _axiosJsDefault.default));
@@ -6780,6 +6781,23 @@ Object.entries(HttpStatusCode).forEach(([key, value])=>{
     HttpStatusCode[value] = key;
 });
 exports.default = HttpStatusCode;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6Mcnf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "hideAlert", ()=>hideAlert);
+parcelHelpers.export(exports, "showAlert", ()=>showAlert);
+const hideAlert = ()=>{
+    const el = document.querySelector(".alert");
+    if (el) el.parentElement.removeChild(el);
+};
+const showAlert = (type, msg)=>{
+    // hide any existing alerts
+    hideAlert();
+    const markup = `<div class="alert alert--${type}">${msg}</div>`;
+    document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
+    window.setTimeout(hideAlert, 5000);
+};
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["f2QDv"], "f2QDv", "parcelRequire11c7")
 

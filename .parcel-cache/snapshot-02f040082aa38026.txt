@@ -193,7 +193,7 @@
 133C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\core-js\internals\function-uncurry-this.js133631597061116852 0
 123C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\.cache\77\eeb1138eb4ec07b0d4181918cb0479.json133636212830614068 0
 133C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\utility-types\dist\aliases-and-guards.d.ts133636216103387545 0
-97C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\public\js\alerts.js133636179103740779 0
+97C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\public\js\alerts.js133636226863469824 0
 106C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\lodash\first.js133631593106907734 0
 108C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\accepts\README.md133570994934911415 0
 114C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\validator\lib\isIBAN.js133590958350111348 0
@@ -272,7 +272,7 @@
 128C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\mapbox-gl\src\style\query_geometry.js133635181674405367 0
 92C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\views\tour.pug133635183923180565 0
 113C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\react-refresh\babel.js133636216041520412 0
-96C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\public\js\login.js133636222257089006 0
+96C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\public\js\login.js133636227438538683 0
 101C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\babel-walk133633219957649412 1
 108C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\mquery\History.md133572134725934269 0
 104C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\pug-error\lib133633219953576988 1
@@ -520,7 +520,7 @@
 118C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\supports-color\package.json133636216049994785 0
 136C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\resolve\test\resolver\dot_slash_main\index.js133633219963628753 0
 102C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\pug-filters133633219953696987 1
-95C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\public\js\bundled133636223678803509 1
+95C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\public\js\bundled133636227426123377 1
 117C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\csso\cjs\replace\index.cjs133636216107909514 0
 114C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\bcryptjs\dist\bcrypt.js133630746436116204 0
 123C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\node_modules\term-size\vendor\macos\.DS_Store133636216043191556 0
@@ -18556,5 +18556,5 @@
 123C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\.cache\02\990a76f45d09d8fc9b254241eb4aea.json133636212800498417 0
 123C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\.cache\02\e13f73ede269fd0dce27dd07421e9e.json133636212828593105 0
 123C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\.cache\02\f481d86ce37d1a32e67dd034ad4f4e.json133636212800268426 0
-104C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\public\js\bundled\index.js133636223677858352 0
-108C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\public\js\bundled\index.js.map133636223678258375 0
+104C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\public\js\bundled\index.js133636227425668151 0
+108C:\Users\james\Documents\Node\complete-node-bootcamp-master\4-natours\starter\public\js\bundled\index.js.map133636227425973333 0
