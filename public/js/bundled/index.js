@@ -151,6 +151,7 @@ console.log("Hello from parcel!");
 // DOM ELEMENTS
 const mapBox = document.getElementById("map");
 const loginForm = document.querySelector(".form");
+const logoutBtn = document.querySelector(".nav__el--logout");
 // VALUES
 // DELEGATION
 if (mapBox) {
@@ -163,6 +164,7 @@ if (loginForm) loginForm.addEventListener("submit", async (e)=>{
     const password = document.getElementById("password").value;
     (0, _login.login)(email, password);
 });
+if (logoutBtn) logoutBtn.addEventListener("click", (0, _login.logout));
 
 },{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","./mapbox":"3zDlz","./login":"7yHem"}],"49tUX":[function(require,module,exports) {
 "use strict";
@@ -2055,6 +2057,7 @@ exports.export = function(dest, destName, get) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "login", ()=>login);
+parcelHelpers.export(exports, "logout", ()=>logout);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _alerts = require("./alerts");
@@ -2078,6 +2081,18 @@ const login = async (email, password)=>{
         console.log(res);
     } catch (err) {
         (0, _alerts.showAlert)("error", err.response.data.message);
+    }
+};
+const logout = async ()=>{
+    try {
+        const res = await (0, _axiosDefault.default)({
+            method: "POST",
+            url: "http://localhost:3000/api/v1/users/logout"
+        });
+        if (res.data.status === "success") location.reload(true);
+    } catch (err) {
+        console.log(err.response);
+        (0, _alerts.showAlert)("error", "Error logging out! Try again.");
     }
 };
 
