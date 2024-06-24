@@ -87,11 +87,12 @@ exports.protect = catchAsync(async (req, res, next) => {
     req.headers.authorization.startsWith('Bearer')
   ) {
     token = req.headers.authorization.split(' ')[1];
-  } else if (req.cookies.jwt) {
+  } else if (req.cookies.jwt && req.cookies.jwt !== 'loggedout') {
     token = req.cookies.jwt;
   }
 
   if (!token) {
+    res.redirect('/');
     return next(
       new AppError('You are not logged in! Please log in to get access.', 401)
     );
