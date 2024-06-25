@@ -28,6 +28,7 @@
     "git-filter-repo": "^0.0.30",
     "helmet": "^7.1.0",
     "hpp": "^0.2.3",
+    "html-to-text": "^9.0.5",
     "jsonwebtoken": "^9.0.2",
     "mapbox-gl": "^3.4.0",
     "mongodb": "^6.5.0",
