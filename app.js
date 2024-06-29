@@ -62,6 +62,7 @@ app.use(
         'https://*.google.com',
         'https://*.gstatic.com',
         'https://*.googleapis',
+        'https://natoursjimmytalanoa-1e98dbfa01f4.herokuapp.com/',
       ],
 
       frameSrc: ["'self'", 'https://*.stripe.com'],
@@ -76,7 +77,12 @@ app.use(
 
       imgSrc: ["'self'", 'data:', 'blob:'],
 
-      connectSrc: ["'self'", 'blob:', 'https://*.mapbox.com'],
+      connectSrc: [
+        "'self'",
+        'blob:',
+        'https://*.mapbox.com',
+        'https://natoursjimmytalanoa-1e98dbfa01f4.herokuapp.com/',
+      ],
 
       upgradeInsecureRequests: [],
     },
