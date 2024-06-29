@@ -6884,10 +6884,11 @@ const bookTour = async (tourId)=>{
         const session = await (0, _axiosDefault.default)(`/api/v1/bookings/checkout-session/${tourId}`);
         console.log(session);
         // 2) Create checkout form + charge credit card
-        await stripe.redirectToCheckout({
-            sessionId: session.data.session.id
-        });
-        window.location.replace(session.data.session.url);
+        // await stripe.redirectToCheckout({
+        //   sessionId: session.data.session.id,
+        // });
+        const checkoutPageUrl = session.data.session.url;
+        window.location = checkoutPageUrl;
     } catch (err) {
         console.log(err);
         (0, _alerts.showAlert)("error", err);
